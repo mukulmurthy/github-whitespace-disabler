@@ -10,6 +10,13 @@
   "background": {
     "scripts": ["interceptor.js"]
   },
+  "content_scripts": [
+    {
+      "matches": ["*://github.com/*/*/pull/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
   "permissions": [
     "webRequest",
     "webRequestBlocking",
