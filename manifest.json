@@ -13,7 +13,8 @@
   "permissions": [
     "webRequest",
     "webRequestBlocking",
-    "*://github.com/*/*/pull/*/files"
+    "*://github.com/*/*/pull/*/files",
+    "*://github.com/*/*/pull/*/changes"
   ],
   "applications": {
     "gecko": {
