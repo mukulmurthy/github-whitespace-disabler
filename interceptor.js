@@ -16,7 +16,8 @@ function redirect(requestDetails) {
 browser.webRequest.onBeforeRequest.addListener(
     redirect,
     { urls : [
-        "*://github.com/*/*/pull/*/files"
+        "*://github.com/*/*/pull/*/files",
+        "*://github.com/*/*/pull/*/changes"
     ]
     },
     ["blocking"]

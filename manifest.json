@@ -10,10 +10,18 @@
   "background": {
     "scripts": ["interceptor.js"]
   },
+  "content_scripts": [
+    {
+      "matches": ["*://github.com/*/*/pull/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
   "permissions": [
     "webRequest",
     "webRequestBlocking",
-    "*://github.com/*/*/pull/*/files"
+    "*://github.com/*/*/pull/*/files",
+    "*://github.com/*/*/pull/*/changes"
   ],
   "applications": {
     "gecko": {
